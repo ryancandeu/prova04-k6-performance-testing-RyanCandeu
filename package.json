@@ -7,7 +7,8 @@
     "format": "prettier --write \"**/**.[jt]s?(x)\"",
     "verify": "prettier --check \"**/**.[jt]s?(x)\"",
     "test": "k6 run --out web-dashboard -e K6_WEB_DASHBOARD_EXPORT=src/output/dashboard.html src/tests/Tests.spec.js",
-    "ci": "npm run format && npm run verify && npm run test"
+    "ci": "npm run format && npm run verify && npm run test",
+    "test:dog-api": "k6 run --out web-dashboard -e K6_WEB_DASHBOARD_EXPORT=src/output/dog-api-dashboard.html src/tests/DogApi.spec.js"
   },
   "devDependencies": {
     "k6": "^0.0.0",
